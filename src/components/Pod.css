@@ -1,0 +1,45 @@
+.pod {
+  background-color: #292929;
+  max-width: 1000px;
+  border-radius: 10px;
+  padding: 1px 15px 15px 15px;
+  margin-bottom: 50px;
+
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.pod h2 {
+  margin: 15px;
+}
+
+.pod img {
+  width: 100%;
+  max-height: 800px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.pod figure {
+  margin: 0;
+}
+
+.pod figcaption {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.pod hr {
+  margin-top: 15px;
+  max-width: 60%;
+}
+
+.pod a {
+  font-size: 14px;
+  color: #90e0ef;
+}
+
+.pod a:visited {
+  color: #90e0ef;
+}
