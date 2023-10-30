@@ -60,7 +60,13 @@ const Pod = ({ queryDate }: Props) => {
     <div className="pod">
       <h2>{pod.title}</h2>
       <figure>
-        <img src={pod.url} />
+        {pod.media_type == "image" ? (
+          <img src={pod.url} />
+        ) : pod.media_type == "video" ? (
+          <iframe src={pod.url}></iframe>
+        ) : (
+          <p>Unsupported media type</p>
+        )}
         <figcaption>
           <em>{"Copyright: " + (pod.copyright || "public domain")}</em>
         </figcaption>
