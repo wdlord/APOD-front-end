@@ -23,11 +23,53 @@ input[type="date"] {
   border-width: 0px;
   color: #48cae4;
   padding: 8px 16px;
-  margin: 32px;
+  margin: 32px 16px;
+  height: 32px;
+  box-sizing: border-box;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .nav h1 {
   margin: 0;
   margin-top: 48px;
+}
+
+.arrow-button {
+  color: #48cae4;
+  width: 32px;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  position: relative;
+}
+
+.arrow-button::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #353535;
+  border-radius: 50%;
+  border-width: 0;
+  width: 32px;
+  aspect-ratio: 1 / 1;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 0;
+}
+
+.arrow-button:hover::before {
+  transform: scale(1.03);
+}
+
+.arrow-button.disabled {
+  opacity: 50%;
+  color: lightgray;
+}
+
+.arrow-button.disabled:hover::before {
+  transform: none;
 }

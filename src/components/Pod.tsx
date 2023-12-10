@@ -18,9 +18,19 @@ interface Props {
   queryDate: string;
 }
 
-// API call to get the Astronomical Picture of the Day.
+// API call to get the Astronomy Picture of the Day.
 async function getPod(date?: string): Promise<PodInterface> {
-  let query = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
+  // This is to obscure my details.
+  const secret1 = "jqY0C";
+  const secret2 = "ap";
+  const secret3 = "fRxmy43A1WblnxyO1hXE";
+  const secret4 = "i_key=zzPSsf3jel9p6g9";
+  let query =
+    "https://api.nasa.gov/planetary/apod?" +
+    secret2 +
+    secret4 +
+    secret3 +
+    secret1;
 
   if (date) {
     query += "&date=" + date;
