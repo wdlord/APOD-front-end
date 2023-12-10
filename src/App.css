@@ -34,6 +34,12 @@ input[type="date"] {
   margin-top: 48px;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .arrow-button {
   color: #48cae4;
   width: 32px;
@@ -43,6 +49,9 @@ input[type="date"] {
   background-color: transparent;
   border: none;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .arrow-button::before {
@@ -72,4 +81,16 @@ input[type="date"] {
 
 .arrow-button.disabled:hover::before {
   transform: none;
+}
+
+.arrow-icon {
+  width: 12px;
+  aspect-ratio: 1 / 1;
+  filter: invert(77%) sepia(64%) saturate(1365%) hue-rotate(156deg)
+    brightness(95%) contrast(87%);
+}
+
+.arrow-button.disabled .arrow-icon {
+  filter: invert(88%) sepia(0%) saturate(1363%) hue-rotate(147deg)
+    brightness(97%) contrast(94%);
 }

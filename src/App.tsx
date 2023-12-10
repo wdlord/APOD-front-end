@@ -43,7 +43,7 @@ function App() {
                 });
               }}
             >
-              ⮜
+              <img src="/src/assets/left-arrow.svg" className="arrow-icon" />
             </button>
             <input
               type="date"
@@ -61,15 +61,13 @@ function App() {
               disabled={queryDate == today}
               onClick={() => {
                 setQueryDate((prevDate) => {
-                  // if (prevDate == today) return prevDate;
-
                   const date = new Date(prevDate + "\n");
                   date.setDate(date.getDate() + 1);
                   return formatDate(date);
                 });
               }}
             >
-              ⮞
+              <img src="/src/assets/right-arrow.svg" className="arrow-icon" />
             </button>
           </div>
         </div>
